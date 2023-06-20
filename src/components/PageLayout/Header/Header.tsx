@@ -1,7 +1,8 @@
 import { FC } from "react";
 
-import styles from "./Header.module.css";
 import { Cart } from "@/components/Cart/Cart";
+
+import styles from "./Header.module.css";
 
 export const Header: FC = () => {
     return (

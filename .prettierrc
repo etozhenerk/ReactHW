@@ -1,0 +1,17 @@
+{
+  "semi": true,
+  "trailingComma": "all",
+  "printWidth": 140,
+  "tabWidth": 4,
+  "endOfLine": "crlf",
+  "importOrder": [
+    "^(@clients).*",
+    "^(@components).*",
+    "^(@store).*",
+    "^(@consts|@types|@hooks|@authorization|@utils|@trees).*",
+    "^.*/@services/(.*)$",
+    "^(..\\/|.\\/)[^@].*(?<!css)$",
+    "^.*.(style|module).css$"
+  ],
+  "importOrderSeparation": true
+}

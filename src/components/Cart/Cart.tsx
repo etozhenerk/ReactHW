@@ -1,6 +1,8 @@
 import { FC } from "react";
-import styles from "./Cart.module.css";
+
 import { CartIcon } from "../icons/CartIcon";
+
+import styles from "./Cart.module.css";
 
 export const Cart: FC = () => {
     return (

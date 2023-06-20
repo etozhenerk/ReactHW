@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-gray-dark);
+  padding: 24px 32px;
+}
+
+.title {
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+
+color: var(--color-white);
+}

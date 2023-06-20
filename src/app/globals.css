@@ -1,6 +1,11 @@
 :root {
+    /* Base palette */
+    --color-white: #fff;
+    --color-black: #000;
+
+    /* Grey palette */
+    --color-grey: #cccccc;
     --color-gray-dark: #333333;
-    --color-white: #ffffff;
 }
 
 * {

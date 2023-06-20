@@ -1,0 +1,31 @@
+.container-disabled {
+    border: 1px solid var(--color-grey);
+
+    background-color: var(--color-grey);
+
+    cursor: auto;
+
+    user-select: none;
+}
+
+.container-disabled:hover {
+    border: 1px solid var(--color-grey);
+
+    background-color: var(--color-grey);
+}
+
+.container-disabled:hover::after {
+    border-color: var(--color-grey-dark) transparent transparent transparent;
+}
+
+.container-disabled::after {
+    border-color: var(--color-grey-dark) transparent transparent transparent;
+}
+
+.container-disabled:hover .selected-text-disabled {
+    color: var(--color-grey-primary);
+}
+
+.selected-text-disabled {
+    color: var(--color-grey-primary);
+}

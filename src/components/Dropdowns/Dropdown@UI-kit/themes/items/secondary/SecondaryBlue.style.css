@@ -1,0 +1,15 @@
+.dropdown-item:hover {
+    background-color: var(--color-blue-sky);
+}
+
+.dropdown-item-active {
+    background-color: var(--color-blue-sky);
+}
+
+.dropdown-item-active:hover {
+    background-color: var(--color-blue-sky);
+}
+
+.text {
+    color: var(--color-blue-primary);
+}

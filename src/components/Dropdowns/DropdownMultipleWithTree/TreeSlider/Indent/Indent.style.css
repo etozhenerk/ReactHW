@@ -1,0 +1,9 @@
+.border {
+    position: absolute;
+    top: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background-color: var(--color-grey-primary);
+}

@@ -1,0 +1,15 @@
+.dropdown-item:hover {
+    background-color: var(--color-grey);
+}
+
+.dropdown-item-active {
+    background-color: var(--color-grey);
+}
+
+.dropdown-item-active:hover {
+    background-color: var(--color-grey);
+}
+
+.text {
+    color: #000;
+}

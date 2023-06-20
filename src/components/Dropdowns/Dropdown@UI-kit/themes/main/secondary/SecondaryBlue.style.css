@@ -1,0 +1,25 @@
+.container {
+    border: 1px solid var(--color-blue-primary);
+
+    background-color: #fff;
+}
+
+.container:hover {
+    background-color: var(--color-blue-primary);
+}
+
+.container::after {
+    border-color: var(--color-blue-primary) transparent transparent transparent;
+}
+
+.container:hover::after {
+    border-color: #fff transparent transparent transparent;
+}
+
+.selected-text {
+    color: var(--color-blue-primary);
+}
+
+.container:hover .selected-text {
+    color: #fff;
+}

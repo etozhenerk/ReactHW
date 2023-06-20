@@ -1,0 +1,107 @@
+.node {
+    display: grid;
+    grid-template-columns: 25px 1fr 22px;
+    grid-gap: 0 5px;
+    align-items: center;
+
+    padding: 8px 8px 8px 0;
+
+    background-color: #fff;
+
+    user-select: none;
+}
+
+.node:hover {
+    background-color: var(--color-grey-light);
+
+    cursor: pointer;
+}
+
+.node:first-child:hover {
+    background-color: #fff;
+
+    cursor: auto;
+}
+
+.node-not-selectable:hover {
+    background-color: #fff;
+
+    cursor: auto;
+}
+
+.node-without-arrow {
+    grid-template-columns: 1fr;
+}
+
+.node-selected-without-arrow {
+    grid-template-columns: 1fr 22px;
+}
+
+.node:hover > span:last-of-type {
+    opacity: 1;
+}
+
+.arrow-wrap {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+
+    width: 16px;
+    height: 12px;
+    padding: 5px;
+
+    cursor: pointer;
+}
+
+.arrow {
+    padding: 3px;
+
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    border-radius: 1px;
+
+    transform: rotate(-45deg);
+
+    transition: transform 0.2s ease;
+}
+
+.arrow-unfolded {
+    transform: rotate(45deg);
+}
+
+.node-name {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.4;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    overflow: hidden;
+}
+
+.node-name-nested {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.node-name-selected {
+    font-weight: bold;
+}
+
+.text {
+    color: #000;
+    font-weight: normal;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 16px;
+}
+
+.node-counter {
+    justify-self: end;
+
+    color: var(--color-blue-primary);
+}

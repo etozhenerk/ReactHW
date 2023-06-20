@@ -1,7 +1,7 @@
+import { TMouseEvent } from "@common/types";
 import React, { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
-import { TMouseEvent } from "@common/types";
 import { styler } from "@utils/styler";
 
 import { CheckIcon } from "../../../../../Icons@UI-kit/CheckIcon";

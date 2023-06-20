@@ -1,0 +1,21 @@
+.container {
+    width: 360px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+
+    color: #1b1f23;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: var(--font-sf-pro-text);
+    line-height: 20px;
+
+    border: 1px solid #e1e3e6;
+    border-radius: 8px;
+
+    background: var(--color-white);
+}
+
+.container::-webkit-input-placeholder,
+.container::-moz-placeholder {
+    color: var(--color-grey);
+}

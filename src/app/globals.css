@@ -1,11 +1,20 @@
 :root {
     /* Base palette */
     --color-white: #fff;
+    --color-white-light: #f5f5f5;
+
     --color-black: #000;
+    --color-black-pearl: #1b1f23;
 
     /* Grey palette */
-    --color-grey: #cccccc;
+    --color-grey: #999fa6;
     --color-gray-dark: #333333;
+    --color-gray-light: #e1e3e6;
+
+    /* Orange palette */
+    --color-orange: #ff5500;
+    --color-orange-hover: #e94e00;
+    --color-orange-disabled: #ffa375;
 }
 
 * {

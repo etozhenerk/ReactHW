@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.counter {
+    padding: 4px 6px;
+
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 14px;
+    font-family: var(--font-roboto);
+    line-height: 20px;
+
+    border-radius: 8px;
+
+    background: var(--color-orange);
+}

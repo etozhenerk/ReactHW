@@ -1,3 +1,10 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+
     height: calc(100vh - 170px);
+
+    background: var(--color-grey);
 }

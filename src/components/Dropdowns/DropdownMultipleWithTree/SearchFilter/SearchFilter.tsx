@@ -1,6 +1,5 @@
-import React from "react";
-
 import { TMouseEvent } from "@common/types";
+import React from "react";
 
 import { Search } from "../../../../Search";
 

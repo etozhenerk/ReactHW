@@ -1,7 +1,7 @@
+import { TMouseEvent } from "@common/types";
 import { CheckIcon } from "@lan/lan-design-system";
 import React from "react";
 
-import { TMouseEvent } from "@common/types";
 import { styler } from "@utils/styler";
 
 import "../../../utils/helpers/prototypes";

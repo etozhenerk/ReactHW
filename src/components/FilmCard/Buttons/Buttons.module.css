@@ -11,7 +11,7 @@
 }
 
 .counter {
-    color: var(--color-black-pearl);
+    color: var(--color-black-primary);
     font-weight: 600;
     font-size: 20px;
     font-family: var(--font-sf-pro-text);

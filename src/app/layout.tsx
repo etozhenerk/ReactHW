@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en">
             <body className={classNames(roboto.variable, sfProText.variable, styles.container)}>
                 <Header />
-                {children}
+                <main className={styles.content}>{children}</main>
                 <Footer />
             </body>
         </html>

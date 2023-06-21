@@ -1,4 +1,13 @@
 .container {
     display: grid;
-    grid-template-rows: 84px max-content 86px;
+    grid-template-rows: minmax(calc(100vh - 170px), 1fr) 86px;
+
+    padding-top: 84px;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 24px 32px;
+
+    background: var(--color-grey);
 }

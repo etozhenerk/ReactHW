@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title {
+    color: var(--color-black-primary);
+    font-weight: 600;
+    font-size: 32px;
+    font-family: var(--font-roboto);
+    line-height: 32px;
+}
+
+.text {
+    color: var(--color-black-primary);
+    font-size: 16px;
+    font-family: var(--font-roboto);
+    line-height: 24px;
+}

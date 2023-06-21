@@ -1,7 +1,7 @@
 import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
 
-export const inter = Roboto({ weight: ["400", "700"], subsets: ["cyrillic"], variable: "--font-roboto" });
+export const roboto = Roboto({ weight: ["400", "700"], subsets: ["cyrillic"], variable: "--font-roboto" });
 
 export const sfProText = localFont({
     src: [

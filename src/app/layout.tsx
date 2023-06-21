@@ -1,5 +1,5 @@
 import "./globals.css";
-import { inter, sfProText } from "@common/consts";
+import { roboto, sfProText } from "@common/consts";
 import classNames from "classnames";
 
 import { Footer } from "@components/Footer/Footer";
@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={classNames(inter.variable, sfProText.variable, styles.container)}>
+            <body className={classNames(roboto.variable, sfProText.variable, styles.container)}>
                 <Header />
                 {children}
                 <Footer />

@@ -33,10 +33,16 @@ export const Dropdown: React.FC<DropdownProps> = (props) => {
     const disabled = props.disabled || props.pending;
     const itemsContainerMountNodeId = props.itemsContainerMountNodeId ?? mountNodeId;
 
-    const wrapperRef = useOuterClick<HTMLDivElement>(() => setShow(false), [mountNodeId]);
+    const wrapperRef = useOuterClick<HTMLDivElement>(() => {
+        console.log(1);
+
+        setShow(false);
+    }, [mountNodeId]);
     const onOpenDelay = useMemo(() => (props.preloadOnOpen ? 100 : 50), [props.preloadOnOpen]);
 
     useEffect(() => {
+        console.log(wrapperRef);
+
         const bounding = wrapperRef.current.getBoundingClientRect();
         const elementHeight = bounding.height;
         const height = window.innerHeight;

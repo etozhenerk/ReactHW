@@ -1,6 +1,8 @@
 .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 408px 1fr;
     gap: 10px;
     align-items: flex-start;
+
+    height: 100%;
 }

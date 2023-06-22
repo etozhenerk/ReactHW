@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+}
+
+.label {
+    color: var(--color-black-primary);
+    font-size: 14px;
+    font-family: var(--font-sf-pro-text);
+    line-height: 20px;
+}

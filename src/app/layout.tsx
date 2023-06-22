@@ -9,7 +9,7 @@ import styles from "./layout.module.css";
 
 export const metadata = {
     title: "React База",
-    description: "Запомните - Реакт это база.",
+    description: "Запомните - Реакт это база. Запомнили? Забудьте.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,0 +1,22 @@
+.container {
+    position: sticky;
+    top: 108px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    height: calc(100vh - 218px);
+}
+
+.title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

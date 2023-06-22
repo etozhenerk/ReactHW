@@ -19,5 +19,5 @@ export const useOuterClick = <T extends HTMLElement>(callback: () => void): Reac
         };
     }, [innerRef]);
 
-    return innerRef; // convenience for client (doesn't need to init ref himself)
+    return innerRef;
 };

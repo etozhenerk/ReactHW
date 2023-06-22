@@ -30,7 +30,6 @@
             "@components/*": ["./src/components/*"],
             "@common/*": ["./src/common/*"],
             "@hooks/*": ["./src/hooks/*"],
-            "@utils/*": ["./src/utils/*"],
             "@src/*": ["./src/*"]
         }
     },

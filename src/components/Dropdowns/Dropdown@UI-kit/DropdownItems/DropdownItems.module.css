@@ -1,4 +1,4 @@
-.dropdown-items-container {
+.dropdownItemsContainer {
     position: fixed;
     z-index: 100;
 
@@ -18,18 +18,18 @@
     overflow-y: auto;
 }
 
-.dropdown-items-container-unfold-upper {
+.dropdownItemsContainerUnfoldUpper {
     top: auto;
     bottom: 150%;
 }
 
-.dropdown-items-container::-webkit-scrollbar {
+.dropdownItemsContainer::-webkit-scrollbar {
     width: 5px;
 
     border-radius: 25px;
 }
 
-.dropdown-items-container::-webkit-scrollbar-thumb {
+.dropdownItemsContainer::-webkit-scrollbar-thumb {
     border-radius: 25px;
 
     background-color: var(--color-grey-primary);

@@ -1,11 +1,11 @@
+import classNames from "classnames";
 import React, { CSSProperties, PropsWithChildren } from "react";
 
-import { styler } from "@utils/styler";
+import { Portal } from "@components/Portal/Portal";
 
-import { useCreateNodeWithId } from "../../../../common/hooks/useCreateNodeWithId";
-import { Portal } from "../../../Portal";
+import { useCreateNodeWithId } from "@hooks/useCreateNodeWithId";
 
-import styles from "./DropdownItems.style.css";
+import styles from "./DropdownItems.module.css";
 
 type DropdownItemsProps = {
     show: boolean;
@@ -15,17 +15,16 @@ type DropdownItemsProps = {
     itemsContainerMountNodeId: string;
 };
 
-export const DropdownItems: React.FC<DropdownItemsProps> = (props: PropsWithChildren<DropdownItemsProps>) => {
+export const DropdownItems: React.FC<PropsWithChildren<DropdownItemsProps>> = (props: PropsWithChildren<DropdownItemsProps>) => {
     const node = useCreateNodeWithId(props.itemsContainerMountNodeId);
 
     return (
         <Portal mountElement={node}>
             <ul
-                className={styler(
-                    styles.dropdownItemsContainer,
-                    [!props.show, styles.hide],
-                    [props.upperUnfold, styles.dropdownItemsContainerUnfoldUpper],
-                )}
+                className={classNames(styles.dropdownItemsContainer, {
+                    [styles.hide]: !props.show,
+                    [styles.dropdownItemsContainerUnfoldUpper]: props.upperUnfold,
+                })}
                 style={props.itemsContainerStyles}
             >
                 {props.children}

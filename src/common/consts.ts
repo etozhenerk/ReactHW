@@ -50,3 +50,9 @@ export const faqData: Faq[] = [
         answer: "Мы — крупнейший сервис о кино в рунете. На нем вы сможете посмотреть фильмы и сериалы, купить билеты в кино, узнать рейтинги популярных видео и интересные факты, поставить фильмам оценки, написать рецензии и дополнить описание фильмов.",
     },
 ];
+
+export function assertIsNode(e: EventTarget | null): asserts e is Node {
+    if (!e || !("nodeType" in e)) {
+        throw new Error(`Node expected`);
+    }
+}

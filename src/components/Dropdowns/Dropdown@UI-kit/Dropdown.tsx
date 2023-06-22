@@ -1,5 +1,6 @@
-import { useOuterClick } from "@lan/md-react-hooks";
 import React, { CSSProperties, useEffect, useMemo, useState } from "react";
+
+import { useOuterClick } from "@hooks/useOuterClick";
 
 import { DropdownView } from "./Dropdown.view";
 import { themes } from "./themes";
@@ -45,7 +46,11 @@ export const Dropdown: React.FC<DropdownProps> = (props) => {
         const minWidth = bounding.width;
         const width = bounding.width;
 
-        if ((top > 0 || top === "auto") && (bottom > 0 || bottom === "auto") && left > 0) {
+        if (
+            ((typeof top === "number" && top > 0) || top === "auto") &&
+            ((typeof bottom === "number" && bottom > 0) || bottom === "auto") &&
+            left > 0
+        ) {
             setItemsContainerStyles((prev) => ({ ...prev, top, left, bottom, minWidth, width: prev?.width ?? width }));
         }
     }, [show]);

@@ -30,11 +30,11 @@
     transform: translateY(-50%);
 }
 
-.container-pending::after {
+.containerPending::after {
     content: none;
 }
 
-.selected-text {
+.selectedText {
     font-weight: normal;
     font-size: 14px;
     font-style: normal;
@@ -43,7 +43,7 @@
     user-select: none;
 }
 
-.pending-wrap {
+.pendingWrap {
     position: absolute;
     top: 50%;
     right: 10px;

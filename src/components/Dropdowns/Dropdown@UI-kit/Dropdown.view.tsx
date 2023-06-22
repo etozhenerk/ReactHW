@@ -1,13 +1,11 @@
+import classNames from "classnames";
 import React, { CSSProperties, PropsWithChildren } from "react";
 
-import { styler } from "@utils/styler";
-
-import { Spinner } from "../../Spinner";
 import { DropdownTheme } from "./Dropdown";
-import { DropdownItems } from "./DropdownItems";
+import { DropdownItems } from "./DropdownItems/DropdownItems";
 import { themes } from "./themes";
 
-import styles from "./Dropdown.style.css";
+import styles from "./Dropdown.module.css";
 import disabledStyles from "./themes/main/disabled/DisabledDropdown.style.css";
 
 type DropdownViewProps = {
@@ -29,21 +27,18 @@ export const DropdownView = React.forwardRef<HTMLDivElement, PropsWithChildren<D
     return (
         <div
             ref={ref}
-            className={styler(
-                styles.container,
-                themeStyles.container,
-                [props.disabled, disabledStyles.containerDisabled],
-                [props.pending, styles.containerPending],
-            )}
+            className={classNames(styles.container, themeStyles.container, {
+                [disabledStyles.containerDisabled]: props.disabled,
+                [styles.containerPending]: props.pending,
+            })}
             style={props.dropdownStyles}
             onClick={props.setShow}
         >
-            {props.pending && (
-                <span className={styles.pendingWrap}>
-                    <Spinner size={1.5} />
-                </span>
-            )}
-            <span className={styler(styles.selectedText, themeStyles.selectedText, [props.disabled, disabledStyles.selectedTextDisabled])}>
+            <span
+                className={classNames(styles.selectedText, themeStyles.selectedText, {
+                    [disabledStyles.selectedTextDisabled]: props.disabled,
+                })}
+            >
                 {props.selectedValue}
             </span>
             {props.show && (

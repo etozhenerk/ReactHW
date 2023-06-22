@@ -4,12 +4,17 @@ import { Plus } from "@icons/Plus";
 import { FC } from "react";
 
 import { Button } from "@components/Button/Button";
+import { Dropdown } from "@components/Dropdowns/Dropdown@UI-kit/Dropdown";
 import { FilmCard } from "@components/FilmCard/FilmCard";
 import { Input } from "@components/Input/Input";
+import { Portal } from "@components/Portal/Portal";
+
+import { useCreateNodeWithId } from "@hooks/useCreateNodeWithId";
 
 import styles from "./page.module.css";
 
 const Home: FC = () => {
+    const element = useCreateNodeWithId("drop");
     return (
         <div className={styles.container}>
             <Button disabled={false} theme={"primary"} onClick={() => {}}>
@@ -27,6 +32,12 @@ const Home: FC = () => {
             <Input value="" onChange={(value) => console.log(value)} placeholder="test" />
             <FilmCard />
             <FilmCard />
+            <Portal mountElement={element}></Portal>
+            <Dropdown selectedValue="1234">
+                <div>
+                    <span>{123}</span>
+                </div>
+            </Dropdown>
         </div>
     );
 };

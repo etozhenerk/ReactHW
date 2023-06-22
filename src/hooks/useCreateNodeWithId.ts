@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { unmountComponentAtNode } from "react-dom";
 
 export const useCreateNodeWithId = (id: string): HTMLElement => {
     const [mountNode, setMountedNode] = useState<HTMLElement>(document.getElementById(id));

@@ -10,7 +10,7 @@ import styles from "./FilmCard.module.css";
 export const FilmCard: FC = () => {
     return (
         <BlockWrapper className={styles.container}>
-            <Image className={styles.image} src="/test.jpg" width={100} height={120} alt="" />
+            <Image className={styles.image} src="/test.jpg" width={100} height={120} alt="image" />
             <div className={styles.textBlock}>
                 <h3 className={styles.title}>{"Властелин колец: Братство кольца"}</h3>
                 <p className={styles.description}>{"Фэнтези"}</p>

@@ -1,17 +1,17 @@
 :root {
     /* Base palette */
     --color-white: #fff;
-    --color-white-light: #f5f5f5;
+    --color-white-grey: #f5f5f5;
 
     --color-black: #000;
     --color-black-primary: #1b1f23;
 
     /* Grey palette */
-    --color-grey: #f5f5f5;
+    --color-grey: #828282;
+    --color-grey-secondary: #e0e0e0;
     --color-gray-dark: #333333;
     --color-gray-light: #e1e3e6;
 
-    /* Orange palette */
     --color-orange: #ff5500;
     --color-orange-hover: #e94e00;
     --color-orange-disabled: #ffa375;

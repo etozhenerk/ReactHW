@@ -8,7 +8,7 @@ export const Cart: FC = () => {
     return (
         <div className={styles.container}>
             <div className={styles.counter}>{"30"}</div>
-            <Link href={"/"}>
+            <Link href={"/cart"}>
                 <Basket height={25} width={28} color={"var(--color-white)"} />
             </Link>
         </div>

@@ -37,7 +37,7 @@ export const Dropdown: React.FC<DropdownProps> = (props) => {
         console.log(1);
 
         setShow(false);
-    }, [mountNodeId]);
+    });
     const onOpenDelay = useMemo(() => (props.preloadOnOpen ? 100 : 50), [props.preloadOnOpen]);
 
     useEffect(() => {

@@ -1,3 +1,5 @@
+"use client";
+
 import { aboutText } from "@common/consts";
 import { FC } from "react";
 

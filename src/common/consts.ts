@@ -59,3 +59,10 @@ export function assertIsNode(e: EventTarget | null): asserts e is Node {
         throw new Error(`Node expected`);
     }
 }
+
+export const genresMap: Record<string, string> = {
+    fantasy: "Фантастика",
+    horror: "Ужасы",
+    action: "Боевик",
+    comedy: "Комедия",
+};

@@ -1,4 +1,10 @@
+"use client";
+
 import { FC } from "react";
+
+import { PendingErrorGuard } from "@components/PendingErrorGuard/PendingErrorGuard";
+
+import { useGetMovieInfoQuery } from "@store/services/movieApi";
 
 import { MovieInfo } from "./MovieInfo/MovieInfo";
 import { Reviews } from "./Reviews/Reviews";
@@ -12,10 +18,17 @@ interface PageProps {
 }
 
 const Page: FC<PageProps> = ({ params: { id } }) => {
+    const { data, isLoading, isError } = useGetMovieInfoQuery(id);
     return (
         <div className={styles.container}>
-            <MovieInfo id={id} />
-            <Reviews id={id} />
+            <PendingErrorGuard isLoading={isLoading} isError={isError}>
+                {data && (
+                    <>
+                        <MovieInfo id={id} movie={data.movie} />
+                        <Reviews reviews={data.reviews} />
+                    </>
+                )}
+            </PendingErrorGuard>
         </div>
     );
 };

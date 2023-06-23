@@ -1,5 +1,11 @@
 .container {
     display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.counters {
+    display: flex;
     gap: 8px;
     align-items: center;
 }
@@ -13,4 +19,8 @@
     font-family: var(--font-sf-pro-text);
     line-height: 20px;
     text-align: center;
+}
+
+.close {
+    cursor: pointer;
 }

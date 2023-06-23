@@ -1,4 +1,4 @@
-.container-pending {
+.containerPending {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,14 +7,14 @@
     height: 100%;
 }
 
-.error-container {
+.errorContainer {
     grid-column: span 3;
 }
 
-.error-text {
+.errorText {
     padding: 10px 5px;
 
-    color: var(--color-red-primary);
+    color: var(--color-orange);
     font-weight: 500;
     font-size: 14px;
     word-break: break-all;

@@ -2,18 +2,23 @@
 
 import { FC } from "react";
 
-import { useGetMoviesQuery } from "@store/services/movieApi";
+import { PendingErrorGuard } from "@components/PendingErrorGuard/PendingErrorGuard";
 
 import { MovieCard } from "../MovieCard/MovieCard";
+import { useMoviesList } from "./services/useMoviesList";
 
 import styles from "./MoviesList.module.css";
 
 export const MoviesList: FC = () => {
-    const { data, isLoading, error } = useGetMoviesQuery();
+    const { filteredData, isFetching, isError } = useMoviesList();
 
     return (
         <div className={styles.container}>
-            {data && data.map((movie) => <MovieCard withDeleteButton={false} key={movie.id} movie={movie} />)}
+            <PendingErrorGuard isLoading={isFetching} isError={isError}>
+                {filteredData.map((movie) => (
+                    <MovieCard withDeleteButton={false} key={movie.id} movie={movie} />
+                ))}
+            </PendingErrorGuard>
         </div>
     );
 };

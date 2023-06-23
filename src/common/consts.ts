@@ -1,33 +1,12 @@
-import { Roboto } from "next/font/google";
-import localFont from "next/font/local";
-
 import { Faq } from "./types";
 
-export const roboto = Roboto({ weight: ["400", "700"], subsets: ["cyrillic"], variable: "--font-roboto" });
-
-export const sfProText = localFont({
-    src: [
-        {
-            path: "../fonts/SFProText-Regular.ttf",
-            weight: "400",
-            style: "normal",
-        },
-        {
-            path: "../fonts/SFProText-RegularItalic.ttf",
-            weight: "400",
-            style: "italic",
-        },
-        {
-            path: "../fonts/SFProText-Semibold.ttf",
-            weight: "600",
-            style: "normal",
-        },
-    ],
-    variable: "--font-sf-pro-text",
-});
+export const minCartItems = 1;
+export const maxCartItems = 30;
 
 export const dropdownsMountNodeId = "dropdowns";
-export const modalsMountNodeId = "dropdowns";
+export const modalsMountNodeId = "modals";
+
+export const errorText = "Произошла ошибка при загрузке";
 
 export const aboutText = [
     "Мы — крупнейший сервис о кино в рунете. На нем вы сможете посмотреть фильмы и сериалы, купить билеты в кино, узнать рейтинги популярных видео и интересные факты, поставить фильмам оценки, написать рецензии и дополнить описание фильмов.",
@@ -54,9 +33,9 @@ export const faqData: Faq[] = [
     },
 ];
 
-export function assertIsNode(e: EventTarget | null): asserts e is Node {
-    if (!e || !("nodeType" in e)) {
-        throw new Error(`Node expected`);
+export function IsNode(e: EventTarget | null): e is Node {
+    if (e && "nodeType" in e) {
+        return true;
     }
 }
 
@@ -65,4 +44,5 @@ export const genresMap: Record<string, string> = {
     horror: "Ужасы",
     action: "Боевик",
     comedy: "Комедия",
+    all: "Все",
 };

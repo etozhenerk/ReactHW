@@ -1,11 +1,12 @@
 import "./globals.css";
-import { roboto, sfProText } from "@common/consts";
 import classNames from "classnames";
 
 import { Footer } from "@components/Footer/Footer";
 import { Header } from "@componentsUsingStore/Header/Header";
 
 import { StoreProvider } from "@store/StoreProvider";
+
+import { roboto, sfProText } from "../fonts";
 
 import styles from "./layout.module.css";
 

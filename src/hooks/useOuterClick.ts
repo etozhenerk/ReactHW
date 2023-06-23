@@ -1,21 +1,23 @@
-import { assertIsNode } from "@common/consts";
+import { IsNode } from "@common/consts";
 import { useEffect, useRef } from "react";
 
-export const useOuterClick = <T extends HTMLElement>(callback: () => void): React.MutableRefObject<T> => {
+export const useOuterClick = <T extends HTMLElement>(callback: () => void, ignoreNodeId?: string): React.MutableRefObject<T> => {
     const innerRef = useRef<T>();
 
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
+        const outerClick = (event: MouseEvent) => {
             const target = event.target;
-            assertIsNode(target);
-            if (innerRef.current && !innerRef.current.contains(target)) {
+            const block = document.getElementById(ignoreNodeId);
+            const path = event.composedPath();
+
+            if (innerRef.current && IsNode(target) && !innerRef.current.contains(target) && !path.includes(block)) {
                 callback();
             }
         };
 
-        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("mousedown", outerClick);
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("mousedown", outerClick);
         };
     }, [innerRef]);
 

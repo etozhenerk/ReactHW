@@ -22,3 +22,8 @@ export interface Review {
     text: string;
     rating: number;
 }
+
+export interface MovieInfo {
+    movie: Movie;
+    reviews: Review[];
+}

@@ -1,10 +1,12 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
-import { cart } from "./pages/cart";
+import { cart } from "./cart";
+import { home } from "./home";
 import { movieApi } from "./services/movieApi";
 
 export const rootReducer = combineReducers({
     cart,
+    home,
     [movieApi.reducerPath]: movieApi.reducer,
 });
 

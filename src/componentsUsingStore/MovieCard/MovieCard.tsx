@@ -4,10 +4,9 @@ import Link from "next/link";
 import { FC } from "react";
 
 import { BlockWrapper } from "@components/BlockWrapper/BlockWrapper";
+import { CounterButtons } from "@componentsUsingStore/CounterButtons/CounterButtons";
 
 import { Movie } from "@store/services/movieApi.types";
-
-import { Buttons } from "./Buttons/Buttons";
 
 import styles from "./MovieCard.module.css";
 
@@ -26,7 +25,7 @@ export const MovieCard: FC<MovieCardProps> = ({ movie, withDeleteButton }) => {
                 </Link>
                 <p className={styles.genre}>{genresMap[movie.genre]}</p>
             </div>
-            <Buttons withDeleteButton={withDeleteButton} id={movie.id} />
+            <CounterButtons withDeleteButton={withDeleteButton} id={movie.id} />
         </BlockWrapper>
     );
 };

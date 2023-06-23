@@ -1,8 +1,10 @@
-import { CSSProperties, useCallback, useEffect, useRef, useState } from "react";
+import { CSSProperties, useCallback, useEffect, useState } from "react";
 
 import { useOuterClick } from "./useOuterClick";
 
-export const useShowPortalBlock = (): {
+export const useShowPortalBlock = (
+    ignoreNodeId: string,
+): {
     blockRef: React.MutableRefObject<HTMLDivElement>;
     show: boolean;
     switchShow: () => void;
@@ -13,7 +15,7 @@ export const useShowPortalBlock = (): {
 
     const switchShow = useCallback(() => setShow((prev) => !prev), []);
 
-    const blockRef = useOuterClick<HTMLDivElement>(() => setShow(false));
+    const blockRef = useOuterClick<HTMLDivElement>(() => setShow(false), ignoreNodeId);
 
     useEffect(() => {
         const bounding = blockRef.current.getBoundingClientRect();
@@ -23,9 +25,7 @@ export const useShowPortalBlock = (): {
         const minWidth = bounding.width;
         const width = bounding.width;
 
-        if (top > 0 && left > 0) {
-            setBlockStyles((prev) => ({ ...prev, top, left, minWidth, width: prev?.width ?? width }));
-        }
+        setBlockStyles((prev) => ({ ...prev, top, left, minWidth, width: prev?.width ?? width }));
     }, [show]);
 
     return {

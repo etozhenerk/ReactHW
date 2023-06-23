@@ -12,11 +12,3 @@
     font-family: var(--font-roboto);
     line-height: 20px;
 }
-
-.summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-top: auto;
-}

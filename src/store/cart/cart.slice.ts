@@ -1,15 +1,16 @@
+import { maxCartItems, minCartItems } from "@common/consts";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 import { initState } from "./cart.state";
 
-export const slice = createSlice({
+export const cartSlice = createSlice({
     name: "cartSlice",
     initialState: initState,
     reducers: {
         incrementFilmCount: (state, { payload }: PayloadAction<string>) => {
             const count = state[payload] || 0;
 
-            if (count === 30) {
+            if (count === maxCartItems) {
                 return;
             }
 
@@ -22,8 +23,7 @@ export const slice = createSlice({
                 return;
             }
 
-            if (count === 1) {
-                delete state[payload];
+            if (count === minCartItems) {
                 return;
             }
 
@@ -35,6 +35,6 @@ export const slice = createSlice({
     },
 });
 
-export const actions = slice.actions;
+export const actions = cartSlice.actions;
 
-export const cart = slice.reducer;
+export const cart = cartSlice.reducer;

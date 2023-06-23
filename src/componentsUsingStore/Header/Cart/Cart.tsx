@@ -1,5 +1,3 @@
-"use client";
-
 import { Basket } from "@icons/Basket";
 import Link from "next/link";
 import { FC } from "react";

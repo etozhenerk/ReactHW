@@ -4,21 +4,18 @@ import { FC } from "react";
 
 import { Review } from "@components/Review/Review";
 
-import { useGetReviewQuery } from "@store/services/movieApi";
+import { Review as ReviewType } from "@store/services/movieApi.types";
 
 interface ReviewsProps {
-    id: string;
+    reviews: ReviewType[];
 }
 
-export const Reviews: FC<ReviewsProps> = ({ id }) => {
-    const { data, isLoading, error } = useGetReviewQuery(id);
+export const Reviews: FC<ReviewsProps> = ({ reviews }) => {
     return (
-        data && (
-            <>
-                {data.map((item) => (
-                    <Review key={item.id} {...item} />
-                ))}
-            </>
-        )
+        <>
+            {reviews.map((item) => (
+                <Review key={item.id} {...item} />
+            ))}
+        </>
     );
 };

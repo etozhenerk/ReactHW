@@ -1,19 +1,21 @@
+import { genresMap } from "@common/consts";
 import { FC } from "react";
 
 import { Dropdown } from "@components/Dropdown/Dropdown";
 import { SelectWrapper } from "@components/SelectWrapper/SelectWrapper";
 
+import { useGenders } from "./services/useGenders";
+
 export const GenresList: FC = () => {
+    const { selectedGenre, setSelectedValue } = useGenders();
+
     return (
         <SelectWrapper label="Жанр">
             <Dropdown
-                selectedKey={null}
-                items={{
-                    "1": "item",
-                    "2": "item",
-                    "3": "item",
-                }}
-                setSelectedValue={(key) => console.log(key)}
+                isLoading={false}
+                selectedKey={selectedGenre}
+                items={genresMap}
+                setSelectedValue={setSelectedValue}
                 placeholder="Выберите жанр"
             />
         </SelectWrapper>

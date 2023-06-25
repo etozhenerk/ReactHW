@@ -33,16 +33,10 @@ export const faqData: Faq[] = [
     },
 ];
 
-export function IsNode(e: EventTarget | null): e is Node {
-    if (e && "nodeType" in e) {
-        return true;
-    }
-}
-
 export const genresMap: Record<string, string> = {
+    all: "Все",
     fantasy: "Фантастика",
     horror: "Ужасы",
     action: "Боевик",
     comedy: "Комедия",
-    all: "Все",
 };

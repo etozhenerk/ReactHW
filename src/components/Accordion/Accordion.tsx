@@ -1,6 +1,5 @@
+import { AccordionProvider } from "@contexts/accordionContext";
 import { FC, PropsWithChildren } from "react";
-
-import { AccordionProvider } from "@hooks/accordionContext";
 
 import { AccordionItem } from "./AccordionItem/AccordionItem";
 

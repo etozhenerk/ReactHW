@@ -9,6 +9,7 @@ const Home: FC = () => {
     return (
         <div className={styles.container}>
             <Sidebar />
+
             <MoviesList />
         </div>
     );

@@ -1,5 +1,6 @@
 import "./globals.css";
 import classNames from "classnames";
+import { Suspense } from "react";
 
 import { Footer } from "@components/Footer/Footer";
 import { Header } from "@componentsUsingStore/Header/Header";
@@ -7,6 +8,7 @@ import { Header } from "@componentsUsingStore/Header/Header";
 import { StoreProvider } from "@store/StoreProvider";
 
 import { roboto, sfProText } from "../fonts";
+import Loading from "./loading";
 
 import styles from "./layout.module.css";
 
@@ -21,7 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className={classNames(roboto.variable, sfProText.variable, styles.container)}>
                 <StoreProvider>
                     <Header />
-                    <main className={styles.content}>{children}</main>
+                    <Suspense fallback={<Loading />}>
+                        <main className={styles.content}>{children}</main>
+                    </Suspense>
                     <Footer />
                 </StoreProvider>
             </body>

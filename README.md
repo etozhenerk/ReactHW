@@ -1,8 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Домашнее задание "Реакт"
 
-## Getting Started
-
-First, run the development server:
+Команды для запуска дев сервера:
 
 ```bash
 npm run dev
@@ -12,23 +10,23 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Приложение развернется на [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Описание директорий
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1.  [app](/src/app) - основная папка со страницами приложения
 
-## Learn More
+-   [about](/src/app/about) - страница "О нас"
+-   [faq](/src/app/faq) - страница "Вопросы-ответы"
+-   [cart](/src/app/cart) - страница с корзиной
+-   [film](/src/app/film/%5Bid%5D) - страница с информацией о фильме
 
-To learn more about Next.js, take a look at the following resources:
+2.  [common](/src/common) - папка с общими константами и типами
+3.  [components](/src/components) - папка с компонентами, в которых нет взаимодействия со стором
+4.  [componentsUsingStore](/src/componentsUsingStore) - папка с компонентами, есть взаимодействия со стором
+5.  [contexts](/src/contexts) - папка с контекстами
+6.  [fonts](/src/fonts) - папка со шрифтами
+7.  [hooks](/src/hooks) - папка с хуками
+8.  [store](/src/store) - папка со стором
+9.  [utils](/src/utils) - папка со вспомогательными функциями
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

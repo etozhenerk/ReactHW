@@ -8,16 +8,6 @@ export const movieApi = createApi({
     endpoints: (builder) => ({
         getMovies: builder.query<Movie[], string>({ query: (cinemaId) => `movies?cinemaId=${cinemaId}` }),
         getCinemas: builder.query<Cinema[], void>({ query: () => "cinemas" }),
-        getReviews: builder.query<Review[], void>({ query: () => "reviews" }),
-        getMoviesList: builder.query<Movie[], string[]>({
-            async queryFn(ids, _queryApi, _extraOptions, fetchWithBQ) {
-                const requests = ids.map((movieId) => fetchWithBQ(`movie?movieId=${movieId}`));
-
-                const results = (await Promise.all(requests)).map((item) => item.data as Movie);
-
-                return { data: results };
-            },
-        }),
         getMovieInfo: builder.query<MovieInfo, string>({
             async queryFn(movieId, _queryApi, _extraOptions, fetchWithBQ) {
                 const movie = fetchWithBQ(`movie?movieId=${movieId}`);
@@ -36,4 +26,4 @@ export const movieApi = createApi({
     }),
 });
 
-export const { useGetMoviesQuery, useGetCinemasQuery, useGetReviewsQuery, useGetMoviesListQuery, useGetMovieInfoQuery } = movieApi;
+export const { useGetMoviesQuery, useGetCinemasQuery, useGetMovieInfoQuery } = movieApi;

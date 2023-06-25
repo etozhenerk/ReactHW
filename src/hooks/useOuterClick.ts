@@ -1,5 +1,6 @@
-import { IsNode } from "@common/consts";
 import { useEffect, useRef } from "react";
+
+import { IsNode } from "@utils/isNode";
 
 export const useOuterClick = <T extends HTMLElement>(callback: () => void, ignoreNodeId?: string): React.MutableRefObject<T> => {
     const innerRef = useRef<T>();

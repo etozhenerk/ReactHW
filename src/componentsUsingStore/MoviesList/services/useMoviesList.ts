@@ -4,9 +4,7 @@ import { useSelector } from "react-redux";
 import { useGetMoviesQuery } from "@store/services/movieApi";
 import { Movie } from "@store/services/movieApi.types";
 
-import { useDebounce } from "@hooks/useDebounce";
-
-import { movieTitleSelector, selectedCinemaIdSelector, selectedGenreSelector } from "./selectors";
+import { filterParamsSelector } from "./selectors";
 import { getFilteredMovies } from "./utils";
 
 export const useMoviesList = (): {
@@ -14,15 +12,14 @@ export const useMoviesList = (): {
     isFetching: boolean;
     isError: boolean;
 } => {
-    const title = useSelector(movieTitleSelector);
-    const genre = useSelector(selectedGenreSelector);
-    const cinemaId = useSelector(selectedCinemaIdSelector);
+    const filterParams = useSelector(filterParamsSelector);
 
-    const { data, isFetching, isError } = useGetMoviesQuery(cinemaId);
+    const { data, isFetching, isError } = useGetMoviesQuery(filterParams.cinemaId);
 
-    const debouncedTitle = useDebounce(title, 500);
-
-    const filteredData = useMemo(() => getFilteredMovies(data, genre, debouncedTitle), [data, title, genre, debouncedTitle]);
+    const filteredData = useMemo(
+        () => getFilteredMovies(data, filterParams.genre, filterParams.title),
+        [data, filterParams.title, filterParams.genre],
+    );
 
     return { filteredData, isFetching, isError };
 };

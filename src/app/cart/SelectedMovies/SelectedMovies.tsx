@@ -1,27 +1,11 @@
-"use client";
+import { MoviesList } from "./MoviesList/MoviesList";
+import { Summary } from "./Summary/Summary";
 
-import { FC, useMemo } from "react";
-import { useSelector } from "react-redux";
+import styles from "./SelectedMovies.module.css";
 
-import { PendingErrorGuard } from "@components/PendingErrorGuard/PendingErrorGuard";
-import { MovieCard } from "@componentsUsingStore/MovieCard/MovieCard";
-
-import { useGetMoviesQuery } from "@store/services/movieApi";
-
-import { selectedMoviesSelector } from "./services/selectors";
-
-export const SelectedMovies: FC = () => {
-    const selectedMovies = useSelector(selectedMoviesSelector);
-
-    const { data, isLoading, isError } = useGetMoviesQuery("");
-
-    const movies = useMemo(() => (data ? data.filter((item) => !!selectedMovies[item.id]) : []), [data, selectedMovies]);
-
-    return (
-        <PendingErrorGuard isLoading={isLoading} isError={isError}>
-            {movies.map((movie) => (
-                <MovieCard withDeleteButton={true} key={movie.id} movie={movie} />
-            ))}
-        </PendingErrorGuard>
-    );
-};
+export const SelectedMovies = () => (
+    <div className={styles.container}>
+        <MoviesList />
+        <Summary />
+    </div>
+);

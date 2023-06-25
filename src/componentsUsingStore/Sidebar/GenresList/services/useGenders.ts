@@ -18,7 +18,9 @@ export const useGenders = (): {
         };
     }, []);
 
-    const setSelectedValue = useCallback((key: string) => dispatch(actions.setSelectedGenre(key)), []);
+    const setSelectedValue = useCallback((key: string) => {
+        dispatch(actions.setSelectedGenre(key));
+    }, []);
 
     return { selectedGenre, setSelectedValue };
 };

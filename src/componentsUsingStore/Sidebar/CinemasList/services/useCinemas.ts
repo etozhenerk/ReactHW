@@ -23,7 +23,9 @@ export const useCinemas = (): {
         };
     }, []);
 
-    const setSelectedValue = useCallback((key: string) => dispatch(actions.setSelectedCinemaId(key)), []);
+    const setSelectedValue = useCallback((key: string) => {
+        dispatch(actions.setSelectedCinemaId(key));
+    }, []);
 
     const cinemas = useMemo(() => getCinemaList(data), [data]);
 

@@ -19,6 +19,7 @@ interface PageProps {
 
 const Page: FC<PageProps> = ({ params: { id } }) => {
     const { data, isLoading, isError } = useGetMovieInfoQuery(id);
+
     return (
         <div className={styles.container}>
             <PendingErrorGuard isLoading={isLoading} isError={isError}>

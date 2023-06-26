@@ -1,8 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
+import { movieApi } from "./services/movieApi";
+
 import { cart } from "./cart";
 import { home } from "./home";
-import { movieApi } from "./services/movieApi";
 
 export const rootReducer = combineReducers({
     cart,

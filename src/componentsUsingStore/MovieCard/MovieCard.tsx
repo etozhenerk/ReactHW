@@ -1,4 +1,3 @@
-import { genresMap } from "@common/consts";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -7,6 +6,8 @@ import { BlockWrapper } from "@components/BlockWrapper/BlockWrapper";
 import { CounterButtons } from "@componentsUsingStore/CounterButtons/CounterButtons";
 
 import { Movie } from "@store/services/movieApi.types";
+
+import { genresMap } from "@common/consts";
 
 import styles from "./MovieCard.module.css";
 

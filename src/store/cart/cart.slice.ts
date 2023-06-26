@@ -1,5 +1,6 @@
-import { maxCartItems, minCartItems } from "@common/consts";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+
+import { maxCartItems, minCartItems } from "@common/consts";
 
 import { initState } from "./cart.state";
 

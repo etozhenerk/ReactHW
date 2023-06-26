@@ -7,11 +7,12 @@
   "importOrder": [
     "^(@clients).*",
     "^(@components).*",
+    "^(@componentsUsingStore).*",
     "^(@store).*",
-    "^(@consts|@types|@hooks|@authorization|@utils|@trees).*",
-    "^.*/@services/(.*)$",
+    "^(@common|@contexts|@hooks|@utils|@icons).*",
+    "^.*/services/(.*)$",
     "^(..\\/|.\\/)[^@].*(?<!css)$",
-    "^.*.(style|module).css$"
+    "^.*.(module).css$"
   ],
   "importOrderSeparation": true
 }

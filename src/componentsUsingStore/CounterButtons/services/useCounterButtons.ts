@@ -1,9 +1,10 @@
-import { maxCartItems, minCartItems } from "@common/consts";
 import { useCallback, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { actions } from "@store/cart";
 import { AppState } from "@store/store.types";
+
+import { maxCartItems, minCartItems } from "@common/consts";
 
 import { countSelector } from "./selectors";
 

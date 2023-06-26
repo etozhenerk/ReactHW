@@ -1,8 +1,9 @@
-import { genresMap } from "@common/consts";
 import { FC } from "react";
 
 import { Dropdown } from "@components/Dropdown/Dropdown";
 import { SelectWrapper } from "@components/SelectWrapper/SelectWrapper";
+
+import { genresMap } from "@common/consts";
 
 import { useGenders } from "./services/useGenders";
 

@@ -1,10 +1,11 @@
-import { Close } from "@icons/Close";
-import { Minus } from "@icons/Minus";
-import { Plus } from "@icons/Plus";
 import { FC } from "react";
 
 import { Button } from "@components/Button/Button";
 import { Modal } from "@components/Modal/Modal";
+
+import { Close } from "@icons/Close";
+import { Minus } from "@icons/Minus";
+import { Plus } from "@icons/Plus";
 
 import { useCounterButton } from "./services/useCounterButtons";
 

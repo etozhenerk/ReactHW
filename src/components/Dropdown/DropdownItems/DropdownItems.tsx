@@ -1,9 +1,9 @@
-import { dropdownsMountNodeId } from "@common/consts";
 import classNames from "classnames";
 import { FC, CSSProperties, PropsWithChildren } from "react";
 
 import { Portal } from "@components/Portal/Portal";
 
+import { dropdownsMountNodeId } from "@common/consts";
 import { useCreateNodeWithId } from "@hooks/useCreateNodeWithId";
 
 import styles from "./DropdownItems.module.css";

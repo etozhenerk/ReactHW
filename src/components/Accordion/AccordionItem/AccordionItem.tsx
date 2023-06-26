@@ -1,9 +1,10 @@
-import { useAccordionContext } from "@contexts/accordionContext";
-import { Arrow } from "@icons/Arrow";
 import classNames from "classnames";
 import { FC } from "react";
 
 import { BlockWrapper } from "@components/BlockWrapper/BlockWrapper";
+
+import { useAccordionContext } from "@contexts/accordionContext";
+import { Arrow } from "@icons/Arrow";
 
 import styles from "./AccordionItem.module.css";
 

@@ -1,6 +1,5 @@
 "use client";
 
-import { genresMap } from "@common/consts";
 import Image from "next/image";
 import { FC } from "react";
 
@@ -8,6 +7,8 @@ import { BlockWrapper } from "@components/BlockWrapper/BlockWrapper";
 import { CounterButtons } from "@componentsUsingStore/CounterButtons/CounterButtons";
 
 import { Movie } from "@store/services/movieApi.types";
+
+import { genresMap } from "@common/consts";
 
 import { InfoItem } from "./InfoItem/InfoItem";
 

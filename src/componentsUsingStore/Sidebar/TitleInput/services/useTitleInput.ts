@@ -18,12 +18,6 @@ export const useTitleInput = (): UseTitleInputParams => {
     const [debouncedValue, setDebouncedValue] = useState(title);
 
     useEffect(() => {
-        return () => {
-            dispatch(actions.setMovieTitle(""));
-        };
-    }, []);
-
-    useEffect(() => {
         const handler = setTimeout(() => {
             dispatch(actions.setMovieTitle(debouncedValue));
         }, 500);

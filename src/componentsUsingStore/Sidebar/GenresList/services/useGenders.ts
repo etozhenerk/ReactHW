@@ -1,22 +1,18 @@
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { actions } from "@store/home";
 
 import { selectedGenreSelector } from "./selectors";
 
-export const useGenders = (): {
+interface UseGendersParams {
     selectedGenre: string;
     setSelectedValue: (key: string) => void;
-} => {
+}
+
+export const useGenders = (): UseGendersParams => {
     const selectedGenre = useSelector(selectedGenreSelector);
     const dispatch = useDispatch();
-
-    useEffect(() => {
-        return () => {
-            dispatch(actions.setSelectedGenre("all"));
-        };
-    }, []);
 
     const setSelectedValue = useCallback((key: string) => {
         dispatch(actions.setSelectedGenre(key));

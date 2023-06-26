@@ -4,8 +4,9 @@ import { FC } from "react";
 
 import { PendingErrorGuard } from "@components/PendingErrorGuard/PendingErrorGuard";
 
-import { MovieCard } from "../MovieCard/MovieCard";
 import { useMoviesList } from "./services/useMoviesList";
+
+import { MovieCard } from "../MovieCard/MovieCard";
 
 import styles from "./MoviesList.module.css";
 

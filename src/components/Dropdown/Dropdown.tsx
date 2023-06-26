@@ -1,11 +1,11 @@
-import { dropdownsMountNodeId } from "@common/consts";
-import { Arrow } from "@icons/Arrow";
 import classNames from "classnames";
 import React from "react";
 
 import { Spinner } from "@components/Spinner/Spinner";
 
+import { dropdownsMountNodeId } from "@common/consts";
 import { useShowPortalBlock } from "@hooks/useShowPortalBlock";
+import { Arrow } from "@icons/Arrow";
 
 import { DropdownItems } from "./DropdownItems/DropdownItems";
 

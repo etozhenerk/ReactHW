@@ -1,10 +1,11 @@
 "use client";
 
-import { faqData } from "@common/consts";
 import { FC } from "react";
 
 import { Accordion } from "@components/Accordion/Accordion";
 import { BlockWrapper } from "@components/BlockWrapper/BlockWrapper";
+
+import { faqData } from "@common/consts";
 
 import styles from "./page.module.css";
 

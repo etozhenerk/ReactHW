@@ -1,6 +1,7 @@
-import { Photo } from "@icons/Photo";
 import classNames from "classnames";
 import { FC } from "react";
+
+import { Photo } from "@icons/Photo";
 
 import styles from "./EmptyImage.module.css";
 

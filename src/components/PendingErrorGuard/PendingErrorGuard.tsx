@@ -1,7 +1,8 @@
-import { errorText } from "@common/consts";
 import { FC, PropsWithChildren } from "react";
 
 import { Spinner } from "@components/Spinner/Spinner";
+
+import { errorText } from "@common/consts";
 
 import styles from "./PendingErrorGuard.module.css";
 

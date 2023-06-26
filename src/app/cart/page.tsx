@@ -5,8 +5,9 @@ import { useSelector } from "react-redux";
 
 import { EmptyContent } from "@components/EmptyContent/EmptyContent";
 
-import { SelectedMovies } from "./SelectedMovies/SelectedMovies";
 import { cartItemsLengthSelector } from "./services/selectors";
+
+import { SelectedMovies } from "./SelectedMovies/SelectedMovies";
 
 const Cart: FC = () => {
     const cartItemsLength = useSelector(cartItemsLengthSelector);

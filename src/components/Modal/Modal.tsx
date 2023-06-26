@@ -1,16 +1,16 @@
 "use client";
 
-import { modalsMountNodeId } from "@common/consts";
-import { Close } from "@icons/Close";
 import { FC, useCallback } from "react";
 
 import { BlockWrapper } from "@components/BlockWrapper/BlockWrapper";
 import { Button } from "@components/Button/Button";
 import { Portal } from "@components/Portal";
 
+import { modalsMountNodeId } from "@common/consts";
 import { useCreateNodeWithId } from "@hooks/useCreateNodeWithId";
 import { useHiddenOverfow } from "@hooks/useHiddenOverfow";
 import { useOuterClick } from "@hooks/useOuterClick";
+import { Close } from "@icons/Close";
 
 import styles from "./Modal.module.css";
 

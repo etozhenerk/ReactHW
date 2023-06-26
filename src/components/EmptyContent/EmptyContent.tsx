@@ -1,5 +1,6 @@
-import { Photo } from "@icons/Photo";
 import { FC } from "react";
+
+import { Photo } from "@icons/Photo";
 
 import styles from "./EmptyContent.module.css";
 

@@ -1,9 +1,10 @@
 "use client";
 
-import { aboutText } from "@common/consts";
 import { FC } from "react";
 
 import { BlockWrapper } from "@components/BlockWrapper/BlockWrapper";
+
+import { aboutText } from "@common/consts";
 
 import styles from "./page.module.css";
 
